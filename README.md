@@ -1,1 +1,1 @@
-A module for the sim-plugin to add signal messaging
+This module makes it possible to convert PDF to Excel files
