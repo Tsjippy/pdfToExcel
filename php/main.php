@@ -37,10 +37,9 @@ function readPdf($filePath, $destination, $keepName=true, $type='csv'){
         }
     }
 
-    $parser = new \Smalot\PdfParser\Parser();
-    $pdf = $parser->parseFile($filePath);
-
-    $pages = $pdf->getPages();
+    $parser         = new \Smalot\PdfParser\Parser();
+    $pdf            = $parser->parseFile($filePath);
+    $pages          = $pdf->getPages();
     $rows           = [];
     $header         = [];
     $columnXes      = []; // horizontal position of each column
@@ -74,7 +73,7 @@ function readPdf($filePath, $destination, $keepName=true, $type='csv'){
             }
 
             // First value of the header, start parsing
-            if($value == "Date"){
+            if(trim($value) == "Date"){
                 $skip   = false;
                 $prevY  = $y;
             }
