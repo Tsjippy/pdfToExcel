@@ -1,10 +1,13 @@
 <?php
-namespace SIM\PDFTOEXCEL;
-use SIM;
-use Smalot\PdfParser;
+namespace TSJIPPY\PDFTOEXCEL;
+use TSJIPPY;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\Writer\Csv;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Reads a pdf and creates a csv or excel
@@ -17,7 +20,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Csv;
  * @return  string                  The path to the file  
  */
 function readPdf($filePath, $destination, $keepName=true, $type='csv'){
-    require_once( MODULE_PATH  . 'lib/vendor/autoload.php');
+    require_once( PLUGINPATH  . 'lib/vendor/autoload.php');
 
     if($keepName || $destination == 'download'){
 
@@ -121,7 +124,7 @@ function readPdf($filePath, $destination, $keepName=true, $type='csv'){
     
     //echo $text;
 
-    //SIM\printArray( $rows, true);
+    //TSJIPPY\printArray( $rows, true);
 
     return [
         'header'    => $header, 
@@ -172,7 +175,7 @@ function createExcel($header, $rows, $destination, $download=false){
 
     //Download excel file here
     if($download){
-        SIM\clearOutput();
+        TSJIPPY\clearOutput();
         ob_start();
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header("Content-Disposition: attachment; filename=$destination");
