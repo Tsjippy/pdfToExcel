@@ -4,14 +4,21 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+### Updated
+
+## [10.0.0] - 2026-05-01
+
+
+### Changed
 - module to plugin
 - exclude .vscode from releases
 - updated github workflow versions
 
 ### Fixed
 - processing error
-
-### Updated
 
 ## [8.0.6] - 2025-11-26
 
