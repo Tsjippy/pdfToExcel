@@ -5,7 +5,7 @@ use TSJIPPY;
 /**
  * Plugin Name:  		Tsjippy PDF To Excel
  * Description:  		This plugin makes it possible to convert PDF to Excel files
- * Version:      		10.0.1
+ * Version:      		10.0.2
  * Author:       		Ewald Harmsen
  * AuthorURI:			harmseninnigeria.nl
  * Requires at least:	6.3
